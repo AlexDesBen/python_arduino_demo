@@ -1,12 +1,10 @@
 #*-* coding: utf-8*-*
 ################################################################################
 ################################################################################
-#Author : 
-#Date : 
-#Company : ProximityHCI
-#Name of module : 
-#Version : 
-#Description : 
+#Author : Alexandre Desilets-Benoit
+#Name of module : CarApp
+#Version : ???
+#Description : kivy application for displaying stuff connected to arduino
 ################################################################################
 ################################################################################
 
@@ -22,9 +20,6 @@ class CarStatus(Label):
    pass
 class TapSide(Label):
    pass
-#class ButtonSide(Button):
-#   def OnClick(self):
-#      BMWApp.get_running_app().TapCallBack(self.text)
 
 class CarApp(App):
    def CarCallBack(self,statusCar):
