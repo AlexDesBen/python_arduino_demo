@@ -1,0 +1,56 @@
+#kivy 1.9.1
+GridLayout:
+   id: MainLayout
+   cols: 1
+   rows: 2
+   CarStatus:
+      id: statusCar
+      text: 'Static'
+   GridLayout:
+      cols: 2
+      rows: 1
+      TapSide:
+         id: Left
+         text: 'Left'
+      TapSide:
+         id: Right
+         text: 'Right'
+
+<CarStatus>:
+   size_hint: (None,None)
+   height: self.parent.height/3
+   width: self.parent.width
+   font_size: 250
+   canvas.before:
+      Color:
+         rgba: (0.1,0.1,0.1,0.75)
+      Rectangle:
+         size: self.size
+         pos: self.pos
+<TapSide>:
+   size_hint: (None,None)
+   height: self.parent.height
+   width: self.parent.width/2
+   font_size: 200
+   color: (1,1,1,0.1)
+   canvas.before:
+      Color:
+         rgba: (0.1,0.1,0.1,0.75)
+      Rectangle:
+         size: self.size
+         pos: self.pos
+<ButtonSide>:
+   size_hint: (None,None)
+   height: self.parent.height
+   width: self.parent.width/2
+   font_size: 200
+   color: (1,1,1,0.1)
+   on_release: self.OnClick()
+   canvas.before:
+      Color:
+         rgba: (0.1,0.1,0.1,0.75)
+      Rectangle:
+         size: self.size
+         pos: self.pos
+
+
